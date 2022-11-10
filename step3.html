@@ -1,0 +1,12 @@
+<script type="module">
+import { cr, rgb } from "https://js.sabae.cc/aframe.js";
+const scene = cr("a-scene", document.body);
+for (let i = 0; i < 10; i++) {
+  const box = cr("a-box", scene);
+  box.setAttribute("position", { x: i * 2, y: 1, z: -2 });
+  box.setAttribute("color", rgb(255, 100, 100));
+  if (i % 3 == 0) {
+    box.setAttribute("scale", { x: 2, y: 2, z: 2 });
+  }
+}
+</script>
